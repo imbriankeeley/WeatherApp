@@ -1,0 +1,155 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-950);
+
+--text-50: #eff4f6;
+--text-100: #dfe9ec;
+--text-200: #bed3da;
+--text-300: #9ebdc7;
+--text-400: #7da7b5;
+--text-500: #5d91a2;
+--text-600: #4a7482;
+--text-700: #385761;
+--text-800: #253a41;
+--text-900: #131d20;
+--text-950: #090e10;
+
+--background-50: #eef5f6;
+--background-100: #ddebee;
+--background-200: #bbd6dd;
+--background-300: #99c2cc;
+--background-400: #77adbb;
+--background-500: #5599aa;
+--background-600: #447a88;
+--background-700: #335c66;
+--background-800: #223d44;
+--background-900: #111f22;
+--background-950: #090f11;
+
+--primary-50: #eef5f7;
+--primary-100: #ddebee;
+--primary-200: #bbd7dd;
+--primary-300: #98c3cd;
+--primary-400: #76afbc;
+--primary-500: #549bab;
+--primary-600: #437c89;
+--primary-700: #325d67;
+--primary-800: #223e44;
+--primary-900: #111f22;
+--primary-950: #080f11;
+
+--secondary-50: #edf5f7;
+--secondary-100: #dcecef;
+--secondary-200: #b9d8df;
+--secondary-300: #95c5d0;
+--secondary-400: #72b2c0;
+--secondary-500: #4f9eb0;
+--secondary-600: #3f7f8d;
+--secondary-700: #2f5f6a;
+--secondary-800: #203f46;
+--secondary-900: #102023;
+--secondary-950: #081012;
+
+--accent-50: #edf6f7;
+--accent-100: #dbecf0;
+--accent-200: #b7d9e1;
+--accent-300: #93c6d2;
+--accent-400: #6fb3c3;
+--accent-500: #4ba1b4;
+--accent-600: #3c8090;
+--accent-700: #2d606c;
+--accent-800: #1e4048;
+--accent-900: #0f2024;
+--accent-950: #081012;
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+#pick-city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#weather-container {
+    border-radius: 1rem;
+    padding: 1rem;
+    min-height: 20rem;
+    background-color: var(--background-900);
+}
+
+#weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--text-100);
+}
+
+#weather-info h2 {
+    padding-left: 1rem;
+}
+
+#weather-info p {
+    padding-left: 2rem;
+}
+
+#weather-heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--text-100);
+}
+
+#weather-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    height: 2rem;
+}
+
+#city-input {
+    border: solid var(--accent-900) .1rem;
+    border-radius: .4rem;
+    padding-left: .3rem;
+    background-color: var(--background-100);
+}
+
+#city-input::placeholder {
+    color: var(--text-600);
+}
+
+#search-button {
+    border: solid var(--accent-900) .1rem;
+    border-radius: .4rem;
+    background-color: var(--background-100);
+    color: var(--text-900);
+}
+
+#f-c-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#f-c {
+    width: 3rem;
+    height: 1.5rem;
+    border: .2rem var(--accent-900) solid;
+    border-radius: .5rem;
+    background-color: var(--background-100);
+    color: var(--text-900);
+}

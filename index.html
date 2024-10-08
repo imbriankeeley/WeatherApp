@@ -8,6 +8,27 @@
 </head>
 <body>
     
+    <div id="weather-container">
+        <h1 id="weather-heading">Weather App</h1>
+        <form id="weather-form" action="">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button" type="submit">Search</button>
+        </form>
+        
+        <div id="pick-city" class="hidden">
+            <img src="/images/pickacity.jpeg" alt="Pick a city placeholder image" height="200px">
+        </div>
+        <div id="weather-info" >
+            <h2><span id="loc-icon"></span>Location: <span id="location"></span></h2>
+            <p><span id="con-icon"></span>Conditions: <span id="conditions"></span></p>
+            <p><span id="temp-icon"></span>Temperature: <span id="temperature"></span> °C</p>
+            <p><span id="hum-icon"></span>Humidity: <span id="humidity"></span>%</p>
+            <p><span id="fells-icon"></span>Feels Like: <span id="feels-like"></span> °C</p>
+            <p><span id="wind-icon"></span>Wind Speed: <span id="wind-speed"></span> m/s</p>
+            <div id="f-c-container"><button id="f-c" type="button">F</button></div>
+        </div>
+    </div>
+    
 
     <script src="main.js"></script>
 </body>

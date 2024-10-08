@@ -1,5 +1,5 @@
 
-const exampleCity = 'london'
+
 
 async function getWeather(city) {
     if (city) {
@@ -12,7 +12,7 @@ async function getWeather(city) {
         const humidity = JSON.stringify(location.currentConditions.humidity);
         const feelslike = JSON.stringify(location.currentConditions.feelslike);
         const windspeed = JSON.stringify(location.currentConditions.windspeed);
-        
+
         return objectifyWeather(address, conditions, temp, humidity, feelslike, windspeed);        
 
 }}
@@ -29,5 +29,3 @@ function objectifyWeather(address, conditions, temp, humidity, feelslike, windsp
 
     return weather;
 }
-
-getWeather(exampleCity);
