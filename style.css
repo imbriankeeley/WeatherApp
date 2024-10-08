@@ -88,22 +88,25 @@ body {
     padding: 1rem;
     min-height: 20rem;
     background-color: var(--background-900);
+    position: relative;
+}
+
+#loader {
+    position: absolute;
+    top: 40%;
+    right: 50%;
 }
 
 #weather-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     color: var(--text-100);
 }
 
 #weather-info h2 {
-    padding-left: 1rem;
-}
-
-#weather-info p {
-    padding-left: 2rem;
+    margin-top: 1.6rem;
 }
 
 #weather-heading {
@@ -111,6 +114,8 @@ body {
     display: flex;
     justify-content: center;
     color: var(--text-100);
+    margin: 0;
+    padding-bottom: 1rem;
 }
 
 #weather-form {
@@ -128,6 +133,7 @@ body {
     background-color: var(--background-100);
 }
 
+
 #city-input::placeholder {
     color: var(--text-600);
 }
@@ -139,6 +145,10 @@ body {
     color: var(--text-900);
 }
 
+.icon {
+    color: var(--accent-600);
+}
+
 #f-c-container {
     width: 100%;
     display: flex;
@@ -146,10 +156,11 @@ body {
 }
 
 #f-c {
-    width: 3rem;
-    height: 1.5rem;
+    width: 11rem;
+    height: 1.7rem;
     border: .2rem var(--accent-900) solid;
     border-radius: .5rem;
     background-color: var(--background-100);
     color: var(--text-900);
+    margin: 1rem 0;
 }

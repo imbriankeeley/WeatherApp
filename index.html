@@ -14,22 +14,35 @@
             <input type="text" id="city-input" placeholder="Enter city name">
             <button id="search-button" type="submit">Search</button>
         </form>
+
+        <div id="loader" class="hidden">
+            <i class="fa-solid fa-spinner fa-spin-pulse icon"></i>
+        </div>
         
         <div id="pick-city" class="hidden">
             <img src="/images/pickacity.jpeg" alt="Pick a city placeholder image" height="200px">
         </div>
         <div id="weather-info" >
-            <h2><span id="loc-icon"></span>Location: <span id="location"></span></h2>
-            <p><span id="con-icon"></span>Conditions: <span id="conditions"></span></p>
-            <p><span id="temp-icon"></span>Temperature: <span id="temperature"></span> °C</p>
-            <p><span id="hum-icon"></span>Humidity: <span id="humidity"></span>%</p>
-            <p><span id="fells-icon"></span>Feels Like: <span id="feels-like"></span> °C</p>
-            <p><span id="wind-icon"></span>Wind Speed: <span id="wind-speed"></span> m/s</p>
-            <div id="f-c-container"><button id="f-c" type="button">F</button></div>
+            <h2><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Location: <span id="location"></span></h2>
+            <p><span id="condition-icon" class="icon"></i></span> Conditions: <span id="conditions"></span></p>
+            <!-- <i class="fa-solid fa-cloud"></i> -->
+            <!-- <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <i class="fa-solid fa-cloud-rain"></i> -->
+            <p><span class="icon"><i class="fa-solid fa-temperature-three-quarters"></i></span> Temperature: <span id="temperature"></span> <span id="real-temp">37</span> <span class="f-c-span">°C</span></p>
+            <p><span class="icon"><i class="fa-solid fa-droplet"></i></span> Humidity: <span id="humidity"></span>78%</p>
+            <p><span id="feellike-icon" class="icon"></span> Feels Like: <span id="feels-like"></span> <span id="feels-like-temp">30</span> <span class="f-c-span">°C</span></p>
+            <!-- <i class="fa-solid fa-face-meh"></i> -->
+            <!-- <i class="fa-solid fa-face-smile"></i>
+            <i class="fa-solid fa-face-smile"></i> -->
+            <p><span class="icon"><i class="fa-solid fa-wind"></i></span> Wind Speed: <span id="wind-speed"></span> 4 k/m</p>
+            <div id="f-c-container"><button id="f-c" type="button">Change to Fahrenheit</button></div>
         </div>
     </div>
     
 
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/bfc1bfce9c.js" crossorigin="anonymous"></script>
 </body>
 </html>
