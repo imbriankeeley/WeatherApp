@@ -1,5 +1,4 @@
 const conditionIcon = document.getElementById('condition-icon');
-const feelslikeIcon = document.getElementById('feelslike-icon');
 const fToCButton = document.getElementById('f-c');
 
 const fToCSpan = document.querySelectorAll('.f-c-span');
@@ -8,11 +7,8 @@ const locationValue = document.getElementById('location');
 const conditionsValue = document.getElementById('conditions');
 const temperatureValue = document.getElementById('temperature');
 const humidityValue = document.getElementById('humidity');
-const feelslikeValue = document.getElementById('feels-like');
 const windspeedValue = document.getElementById('wind-speed');
-
 const realTemp = document.getElementById('real-temp');
-const feelslikeTemp = document.getElementById('feels-like-temp');
 
 const form = document.getElementById('weather-form');
 const cityInput = document.getElementById('city-input');
@@ -43,7 +39,6 @@ fToCButton.addEventListener('click', () => {
         }
 
         realTemp.innerText = celsToFar(realTemp.innerText);
-        feelslikeTemp.innerText = celsToFar(feelslikeTemp.innerText);
 
     }
 
@@ -54,7 +49,6 @@ fToCButton.addEventListener('click', () => {
         }
 
         realTemp.innerText = farToCels(realTemp.innerText);
-        feelslikeTemp.innerText = farToCels(feelslikeTemp.innerText);
 
     }
 });
@@ -71,27 +65,27 @@ async function getWeather(city) {
         const conditions = await location.currentConditions.conditions;
         const temp = JSON.stringify(location.currentConditions.temp);
         const humidity = JSON.stringify(location.currentConditions.humidity);
-        const feelslike = JSON.stringify(location.currentConditions.feelslike);
         const windspeed = JSON.stringify(location.currentConditions.windspeed);
 
-        return objectifyWeather(address, conditions, temp, humidity, feelslike, windspeed);        
+        console.log(location);
+
+        return objectifyWeather(address, conditions, temp, humidity, windspeed);        
 
 }}
     
-function objectifyWeather(address, conditions, temp, humidity, feelslike, windspeed) {
+function objectifyWeather(address, conditions, temp, humidity, windspeed) {
     const weather = {
         address: address,
         condition: conditions,
         temp: temp,
         humidity: humidity,
-        feelslike: feelslike,
         windspeed: windspeed
     }
 
     return weather;
 }
 
-function populateWeatherApp(address, condition) {
+function populateWeatherApp(address, condition, realTemperature, humidity, windspeed) {
     if (!pickCity.classList.contains('hidden')) {
         pickCity.classList.add('hidden');
     }
@@ -100,16 +94,20 @@ function populateWeatherApp(address, condition) {
         weatherInfo.classList.remove('hidden');
     }
 
+    const text = fToCButton.innerText;
+
+    if (text == 'Change to Fahrenheit') {
+        realTemp.innerText = farToCels(realTemperature);
+    } else {
+        realTemp.innerText = realTemperature;
+    }
+
     locationValue.innerText = address;
     conditionsValue.innerText = condition;
-}
+    humidityValue.innerText = humidity;
+    windspeedValue.innerText = windspeed
 
-// const locationValue = document.getElementById('location');
-// const conditionsValue = document.getElementById('conditions');
-// const temperatureValue = document.getElementById('temperature');
-// const humidityValue = document.getElementById('humidity');
-// const feelslikeValue = document.getElementById('feels-like');
-// const windspeedValue = document.getElementById('wind-speed');
+}
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -133,6 +131,8 @@ form.addEventListener('submit', async (e) => {
     })
     
 
-    populateWeatherApp(address.trim(), condition.trim(), )
+    populateWeatherApp(address.trim(), condition.trim(), weather.temp, weather.humidity, weather.windspeed)
+
+    console.log(weather);
 
 });
