@@ -102,6 +102,44 @@ function populateWeatherApp(address, condition, realTemperature, humidity, winds
         realTemp.innerText = realTemperature;
     }
 
+
+    if (condition.toLowerCase().includes('clear')) {
+        if (conditionIcon.hasChildNodes()) {
+            conditionIcon.removeChild(conditionIcon.firstChild);
+        }
+        const icon1 = document.createElement('i');
+        icon1.classList.add('fa-solid', 'fa-sun');
+        conditionIcon.append(icon1);
+    } else if (condition.toLowerCase().includes('rain')) {
+        if (conditionIcon.hasChildNodes()) {
+            conditionIcon.removeChild(conditionIcon.firstChild);
+        }
+        const icon1 = document.createElement('i');
+        icon1.classList.add('fa-solid', 'fa-cloud-rain');
+        conditionIcon.append(icon1);
+    } else if (condition.toLowerCase().includes('storm')) {
+        if (conditionIcon.hasChildNodes()) {
+            conditionIcon.removeChild(conditionIcon.firstChild);
+        }
+        const icon1 = document.createElement('i');
+        icon1.classList.add('fa-solid', 'fa-bolt-lightning');
+        conditionIcon.append(icon1);
+    } else if (condition.toLowerCase().includes('cloud')) {
+        if (conditionIcon.hasChildNodes()) {
+            conditionIcon.removeChild(conditionIcon.firstChild);
+        }
+        const icon1 = document.createElement('i');
+        icon1.classList.add('fa-solid', 'fa-cloud');
+        conditionIcon.append(icon1);
+    } else {
+        if (conditionIcon.hasChildNodes()) {
+            conditionIcon.removeChild(conditionIcon.firstChild);
+        }
+        const icon1 = document.createElement('i');
+        icon1.classList.add('fa-solid', 'fa-sun');
+        conditionIcon.append(icon1);
+    }
+
     locationValue.innerText = address;
     conditionsValue.innerText = condition;
     humidityValue.innerText = humidity;
