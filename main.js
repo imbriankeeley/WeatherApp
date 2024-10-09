@@ -75,8 +75,6 @@ async function getWeather(city) {
         const humidity = JSON.stringify(location.currentConditions.humidity);
         const windspeed = JSON.stringify(location.currentConditions.windspeed);
 
-        console.log(location);
-
         return objectifyWeather(address, conditions, temp, humidity, windspeed);        
 
 }}
@@ -157,6 +155,7 @@ function populateWeatherApp(address, condition, realTemperature, humidity, winds
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    document.activeElement.blur();
 
     const city = cityInput.value.trim();
 
@@ -177,8 +176,6 @@ form.addEventListener('submit', async (e) => {
     })
     
 
-    populateWeatherApp(address.trim(), condition.trim(), weather.temp, weather.humidity, weather.windspeed)
-
-    console.log(weather);
+    populateWeatherApp(address.trim(), condition.trim(), weather.temp, weather.humidity, weather.windspeed);
 
 });
