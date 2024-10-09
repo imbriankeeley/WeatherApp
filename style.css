@@ -142,7 +142,7 @@ body {
     border: solid var(--accent-900) .1rem;
     border-radius: .4rem;
     padding-left: .3rem;
-    width: 9rem;
+    width: 8.5rem;
     background-color: var(--background-100);
 }
 
@@ -174,8 +174,8 @@ body {
 }
 
 #f-c {
-    width: 11rem;
-    height: 1.7rem;
+    width: 13rem;
+    height: 1.8rem;
     border: .2rem var(--accent-900) solid;
     border-radius: .5rem;
     background-color: var(--background-100);
