@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    
+    <div id="weather-container">
+        <h1 id="weather-heading">Weather App</h1>
+        <form id="weather-form" action="">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button" type="submit">Search</button>
+        </form>
+
+        <div id="loader" class="hidden">
+            <i class="fa-solid fa-spinner fa-spin-pulse icon"></i>
+        </div>
+        
+        <div id="pick-city" >
+            <img src="/images/pickacity.jpeg" alt="Pick a city placeholder image" height="200px">
+        </div>
+        <div id="weather-info" class="hidden">
+            <h2><span class="icon"><i class="fa-solid fa-location-dot"></i></span> Location: <span id="location"></span></h2>
+            <p><span id="condition-icon" class="icon"></span> Conditions: <span id="conditions"></span></p>
+            <p><span class="icon"><i class="fa-solid fa-temperature-three-quarters"></i></span> Temperature: <span id="temperature"></span> <span id="real-temp"></span> <span class="f-c-span">°F</span></p>
+            <p><span class="icon"><i class="fa-solid fa-droplet"></i></span> Humidity: <span id="humidity"></span></p>
+            <p><span class="icon"><i class="fa-solid fa-wind"></i></span> Wind Speed: <span id="wind-speed"></span> k/m</p>
+            <div id="f-c-container"><button id="f-c" type="button">Change to Celsius</button></div>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/bfc1bfce9c.js" crossorigin="anonymous"></script>
+</body>
+</html>
