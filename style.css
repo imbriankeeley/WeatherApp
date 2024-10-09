@@ -9,6 +9,7 @@ body {
     width: 100vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-950);
+    overflow: hidden;
 
 --text-50: #eff4f6;
 --text-100: #dfe9ec;
