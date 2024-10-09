@@ -155,7 +155,7 @@ function populateWeatherApp(address, condition, realTemperature, humidity, winds
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.activeElement.blur();
+    e.blur();
 
     const city = cityInput.value.trim();
 
