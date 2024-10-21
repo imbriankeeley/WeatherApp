@@ -13,5 +13,5 @@
 ![Changed Temperature](/images/weatherappcelcius.PNG)
 ### You are able to easily changed the metric to be celsius by clicking the button at the bottom of the application. The app will remember the last metric it was in before each fetch so you dont have to click it again.
 
-## Contact Me!
+## Let's Connect!
 ### [LinkedIn](https://www.linkedin.com/in/bkeeley24/)
